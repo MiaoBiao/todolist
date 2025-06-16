@@ -1,0 +1,34 @@
+-------------------------------------------------------------------------------
+Test set: com.example.todoservice.controller.TodoControllerTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 5.47 s <<< FAILURE! - in com.example.todoservice.controller.TodoControllerTest
+testUpdateTodo  Time elapsed: 0.096 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+com.example.todoservice.service.TodoService#0 bean.findById(
+    1L
+);
+-> at com.example.todoservice.controller.TodoControllerTest.testUpdateTodo(TodoControllerTest.java:127)
+
+However, there was exactly 1 interaction with this mock:
+com.example.todoservice.service.TodoService#0 bean.save(
+    TodoItem{id=1, title='更新任务', description='null', completed=true, userId=null, createdAt=null, updatedAt=null}
+);
+-> at com.example.todoservice.controller.TodoController.updateTodo(TodoController.java:105)
+
+
+	at com.example.todoservice.controller.TodoControllerTest.testUpdateTodo(TodoControllerTest.java:127)
+
+testCreateTodo  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<201> but was:<200>
+	at com.example.todoservice.controller.TodoControllerTest.testCreateTodo(TodoControllerTest.java:101)
+
+testDeleteTodo  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<204> but was:<200>
+	at com.example.todoservice.controller.TodoControllerTest.testDeleteTodo(TodoControllerTest.java:140)
+
+testUnauthorizedAccess  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<401> but was:<302>
+	at com.example.todoservice.controller.TodoControllerTest.testUnauthorizedAccess(TodoControllerTest.java:167)
+

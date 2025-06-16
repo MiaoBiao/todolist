@@ -1,0 +1,3 @@
+com\example\todoservice\TodoServiceIntegrationTest.class
+com\example\todoservice\service\TodoServiceTest.class
+com\example\todoservice\controller\TodoControllerTest.class

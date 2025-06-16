@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.example.todoservice.TodoServiceIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 6.73 s <<< FAILURE! - in com.example.todoservice.TodoServiceIntegrationTest
+testCompleteTodoCrudFlow  Time elapsed: 0.328 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<201> but was:<200>
+	at com.example.todoservice.TodoServiceIntegrationTest.testCompleteTodoCrudFlow(TodoServiceIntegrationTest.java:66)
+
+testUnauthorizedAccess  Time elapsed: 0.039 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<401> but was:<302>
+	at com.example.todoservice.TodoServiceIntegrationTest.testUnauthorizedAccess(TodoServiceIntegrationTest.java:126)
+

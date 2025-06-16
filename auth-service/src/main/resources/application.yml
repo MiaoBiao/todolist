@@ -1,0 +1,26 @@
+server:
+  port: 8083
+
+jwt:
+  secret: your-secret-key
+  expiration: 86400000 # 24小时 
+
+spring:
+  application:
+    name: auth-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/your_database?useSSL=false&serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: 12345
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        enabled: true
+
+logging:
+  level:
+    com.example.authservice: DEBUG
